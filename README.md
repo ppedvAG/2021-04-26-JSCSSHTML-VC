@@ -1,13 +1,13 @@
-# KURS NAME
+# JS HTML CSS
 
 Ein Kurs von PPEDV :rocket:
 
-Datum: xx.xx.2021
+Datum: 26.04.2021
 
-Ort: VC / ...
+Ort: VC
 
-Format: Vollzeit / Teilzeit
+Format: Teilzeit
 
-[Agenda von diesem Kurs auf ppedv.de](füge hier die globale URL ein)
+[Agenda von diesem Kurs auf ppedv.de](https://ppedv.de/Schulung/Kurse/JavaScript-HTML-CSS-jQuery-Training-Seminar-Lehrgang-Weiterbildung.aspx)
 
 Ablauf vom Kurs siehe [hier](./TRAINER/readme.md).
