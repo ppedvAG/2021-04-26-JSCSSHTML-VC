@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selectors</title>
+    <style>
+        /* Element selector (tag name selector) / Typenselektor */
+        h1 {
+            font-size: 60px;
+        }
+
+        /* ID-Selektor */
+        #pId {
+            border: thick dotted red;
+        }
+
+        /* Klassenselektor */
+        .someClass {
+            text-align: right;
+        }
+
+        /* Auflistung-Selektor */
+        p,
+        h1 {
+            text-decoration: underline;
+        }
+
+        /* Eltern-Kind-Sektor */
+        div p {
+            color: blue;
+        }
+        /* Vorfahren-Nachfahren-Selektor */
+        .someClass > div {
+            font-style: italic;
+        }
+        /* Geschwister-Selektor */
+        /* alle Paragraphen, die unmittelbar nach einer H2 stehen */
+        h2 + p {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <h1>      Heading 
+        
+        
+        
+        range 1     </h1>
+    <p id="pId">paragraph</p>
+    <h2>Heading range 2</h2>
+    <p class="someClass">paragraph</p>
+    <h1>Heading range 1</h1>
+    <div class="someClass">division0
+        <p>p in div</p>
+        <div>div1
+            <div>div2</div>
+        </div>
+
+    </div>
+    <input type="text">
+    <p>paragraph</p>
+    <pId>ein komischer HTML Tag</pId>
+
+
+    <!-- Leerzeichen (mehr als 1) und neuen Zeilen werden innerhalb von meisten HTML-Tags ignoriert. Ausnahme - pre-Element -->
+    <pre>
+        Syntax von CSS Selektoren wird bei Emmet verwendet
+    </pre>
+    div#besondereDiv>p+img
+    <div id="besondereDiv">
+        <p></p>
+        <img src="" alt="">
+    </div>
+</body>
+
+</html>
