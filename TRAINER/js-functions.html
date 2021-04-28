@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS FUNCTIONS</title>
+</head>
+
+<body>
+    <h1>JS FUNCTIONS</h1>
+    <h2>1. Funktion ohne Argumente</h2>
+    <pre>Zweck: Funktion Anweisungen ausführen zu lassen, für die man keine weitere Daten (Variablen) braucht.
+        function myFunction() {
+        // eine JS Anweisung
+    }
+</pre>
+    <p>Beispiel. Szenario: Beim Klick auf Button wird Datum angezeigt</p>
+    <button id="btn1" onclick="myFunction1()">zeige das heutige Datum</button>
+    <p id="outp1">platzhalter</p>
+    <script>
+        function myFunction1() {
+            // für HTML-Elemente, die eine ID haben wird automatisch eine Variable angelegt
+            outp1.textContent = new Date();
+        }
+        
+    </script>
+
+    <hr><!-- horizontal rule -->
+
+    <h2>2. Funktion mit Argumenten</h2>
+    <pre>Zweck: Daten in die Funktion zu übergen, die von der Funktion iwie verwendet oder bearbeitet werden müssen
+        Weg: in den runden Klammern eine Variable anlegen ohne jegliche Schlüsselwörter (var, let, const)
+        function myFunction(argName) {
+            // eine JS Anweisung mit argName
+        }
+    </pre>
+    <p>Beispiel 1. Szenario: Beim Input in ein Inputfeld wird dieser Input angezeigt</p>
+    <input type="text" oninput="myFunction2(this)">
+    <p id="outp2">platzhalter</p>
+    <script>
+        function myFunction2(meinNamefürDasArgument) {
+            // console.log('meinNamefürDasArgument :>> ', meinNamefürDasArgument);
+            // Formularelemente (wie auch Input) haben keine Eigenschaft textContent, sondern Eigenschaft value
+            outp2.textContent = meinNamefürDasArgument.value;
+        }
+    </script>
+    <p>Beispiel 2. Szenario gleich, nur umgebaut. Liefert mehr Flexibilität als Bsp1, weil man noch angeben kann, wohin die Ausgabe stattfindet</p>
+    <input type="text" oninput="myFunction2_1(this, outp2_1)">
+    <p id="outp2_1">platzhalter</p>
+    <script>
+        function myFunction2_1(meinNameFürArgument1, meinNameFürArgument2) {
+            meinNameFürArgument2.textContent = meinNameFürArgument1.value;
+
+        }
+    </script>
+
+    <hr>
+
+    <h2>3. Funktion mit Rückgabe (return)</h2>
+    <pre>
+        Begriffe, die man hier braucht:
+        Ausdruck (expression) => liefern Werte
+        Anweisung (statement) => verwenden Werte und weisen diese zu anderen Platzhaltern zu.
+    </pre>
+    <button id="btn3" onclick="outp3.textContent = myFunction3()">gebe die Summe von 4 und 5 zurück</button>
+    <p id="outp3">platzhalter</p>
+    <script>
+        // Ausdruck ist eine Stelle, die irgendwelchen Wert produziert (zurückliefert)
+        // 4
+        // 'text'
+        // new Date()
+
+        // Anweisungen bestehen aus Ausdrücken und produzieren keine Werte. Anweisungen werden einfach ausgeführt.
+        // var x = 4;
+        function myFunction3() {
+            let a = 4;
+            let b = 5;
+            return a+b;
+        }
+    </script>
+</body>
+
+</html>

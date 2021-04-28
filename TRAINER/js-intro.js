@@ -25,7 +25,7 @@ console.log('x :>> ', x);
 // Funktionen: Definition
 
 function myFunction() {
-    console.log('myFunction wurde aufgerufen')
+    console.log('myFunction wurde aufgerufen');
 }
 // Funktionen: Aufruf
 // myFunction();
