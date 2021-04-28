@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS inline block</title>
+    <style>
+        span,
+        p {
+            border: thin solid;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS inline block</h1>
+    <h2>0. vorweg</h2>
+    <pre>
+    hinweis: stehen die Elemente in Code nebeneinander, gibt es kein Abstand zwischen denen
+    stehen die Element in den unterschiedlichen Zeilen, entsteht ein Abstand
+    Das ist der einzige Fall, wo die undruckbaren Zeichen von Code-Datei auch in Browser sichtbar sind
+    mit Ausnahme vom Element pre
+    </pre>
+    <span>span</span><span>span</span><span>span</span>
+    <hr>
+    <span>span</span>
+    <span>span</span>
+    <span>span</span>
+
+    <hr>
+
+    <h2>1. inline vs block</h2>
+    <span>span</span><span>span</span><span>span</span>
+    <p>paragraph</p>
+    <p>paragraph</p>
+    <p>paragraph</p>
+
+    <hr>
+
+    <h2>2. inline block und Breite</h2>
+    <pre>
+        inline ignoriert die Breitenangaben
+    </pre>
+    <style>
+        .class2 {
+            width: 50%;
+
+        }
+    </style>
+    <span class="class2">span</span>
+    <span class="class2">span</span>
+    <span class="class2">span</span>
+    <p class="class2">paragraph</p>
+    <p class="class2">paragraph</p>
+    <p class="class2">paragraph</p>
+
+    <hr>
+
+    <h2>3. inline block und Höhe</h2>
+    <pre>
+        inline ignoriert auch Höhe
+    </pre>
+    <style>
+        .class3 {
+            height: 30px;
+
+        }
+    </style>
+
+    <span class="class3">span</span>
+    <span class="class3">span</span>
+    <span class="class3">span</span>
+    <p class="class3">paragrah</p>
+    <p class="class3">paragrah</p>
+    <p class="class3">paragrah</p>
+
+    <hr>
+
+    <h2>4. padding und margin</h2>
+    <pre>
+        padding akzeptieren alle
+        margin wird bei inline nur links und rechts akzeptiert
+    </pre>
+    <style>
+        .class4 {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+
+    <span class="class4">span</span>
+    <span class="class4">span</span>
+    <span class="class4">span</span>
+    <p class="class4">paragrah</p>
+    <p class="class4">paragrah</p>
+    <p class="class4">paragrah</p>
+
+
+    <hr>
+
+    <h2>5. display eigenschaft kann geändert werden</h2>
+    <style>
+        .class5_1 {
+            display: block;
+        }
+
+        .class5_2 {
+            display: inline;
+        }
+    </style>
+    <span class="class5_1">span</span>
+    <span class="class5_1">span</span>
+    <span class="class5_1">span</span>
+    <p class="class5_2">paragrah</p>
+    <p class="class5_2">paragrah</p>
+    <p class="class5_2">paragrah</p>
+
+    <hr>
+
+    <h2>6. inline-block</h2>
+    <pre>
+        inline-block-Element akzeptieren Maßangaben und stehen nebeneinander, wenn sie genug Platz haben
+    </pre>
+    <style>
+        .class6 {
+            display: inline-block;
+            width: 30%;
+        }
+    </style>
+
+    <span class="class6">span</span>
+    <span class="class6">span</span>
+    <span class="class6">span</span>
+    <p class="class6">paragrah</p>
+    <p class="class6">paragrah</p>
+    <p class="class6">paragrah</p>
+</body>
+
+</html>

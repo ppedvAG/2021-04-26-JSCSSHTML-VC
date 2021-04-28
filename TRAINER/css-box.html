@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BOX</title>
+    <style>
+        p {
+            /* manche CSS-Eigenschaften sind Zusammenfassungen von mehreren CSS-Eigenschaften */
+            /* border: thin solid blue; */
+            border-width: thin;
+            border-style: solid;
+            border-color: blue;
+            /* border-width ist auch ZsFassung für top, right, bottum und left */
+        }
+        #p1 {
+            /* margin, border, padding sind Zusammenfassungen */
+            margin: 10px; /* 10px von vier Seiten */
+            padding: 10px; /* 10px von vier Seiten */
+        }
+        #p2 {
+            /* margins sind überlappend */
+            margin: 10px 20px; /* top u. bottom: 10px, right u. left: 20px  */
+            padding: 10px 20px; /* top u. bottom: 10px, right u. left: 20px  */
+        }
+        #p3 {
+            margin: 10px 20px 30px; /* top right bottom */
+            padding: 10px 20px 30px; /* top right bottom */
+        }
+
+        #p4 {
+            border: thick solid;
+            box-sizing: border-box;
+            width: 90%;
+            /* die Breite 90% wird auch mit Berücksichtigung von Border berechnet */
+        }
+        #p5 {
+            border: thick solid;
+            box-sizing: content-box;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS BOX</h1>
+    <div>
+        <p id="p1">p1 Lorem ipsum dolor sit amet.</p>
+        <p id="p2">p2 Lorem ipsum dolor sit amet.</p>
+        <p id="p3">p3 Lorem ipsum dolor sit amet.</p>
+        <p id="p4">p4 Lorem ipsum dolor sit amet.</p>
+        <p id="p5">p5 Lorem ipsum dolor sit amet.</p>
+    </div>
+
+</body>
+</html>

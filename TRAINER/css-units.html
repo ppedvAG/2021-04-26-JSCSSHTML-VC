@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS UNITS</title>
+    <style>
+        body {
+            font-size: 20px;/* damit ist ein em 20px */
+        }
+
+        div {
+            border: medium solid grey;
+        }
+
+        #pixel {
+            font-size: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #prozent {
+            /* 80% von der gleichen Eigenschaft beim Eltern-Element */
+            font-size: 80%;
+            /* 5% von der Breite vom Eltern-Element */
+            padding: 5%;
+            /* Höhe und Breite vom Element selbst */
+            border-radius: 5%;
+            /* Als Orientierungspunkt dienen bei Prozentangaben 
+            verschiedene Eigenschaften entweder vom Elternelement oder vom Element selbst */
+        }
+
+        #em {
+            /* Orientierungspunkt: Schriftgröße vom Body */
+            font-size: 1.5em;
+            padding: 1.5em;
+            border-radius: 1.5em;
+
+        }
+
+        html {
+            font-size: 40px; /* damit ist 1rem 40px */
+        }
+
+        #rem {
+            /* Orientierungspunkt: Schriftgröße vom Root-Element */
+            font-size: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+        }
+
+        #vw {
+            /* Orientierungspunkt: viewport Breite. 1vw = 1% von der Breite */
+            font-size: 1vw;
+            padding: 1vw;
+            border-radius: 1vw;
+        }
+
+        #vh {
+            /* Orientierungspunkt: viewport Höhe. 1vw = 1% von der Höhe */
+            font-size: 1vh;
+            padding: 1vh;
+            border-radius: 1vh;
+        }
+
+        #vmin {
+            /* Orientierung: entweder viewport width oder height jenachdem was kleiner ist */
+            font-size: 1vmin;
+            padding: 1vmin;
+            border-radius: 1vmin;
+        }
+
+        #vmax {
+            /* Orientierung: entweder viewport width oder height jenachdem was größer ist */
+            font-size: 1vmax;
+            padding: 1vmax;
+            border-radius: 1vmax;
+        }
+    </style>
+
+</head>
+text in html-Element
+
+<body>
+    <h1>CSS UNITS</h1>
+
+    <div id="pixel">
+        <h2>pixel</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nam.</p>
+    </div>
+    <hr>
+    <div id="prozent">
+        <h2>prozent</h2>
+        <p>Perspiciatis accusamus quae suscipit aliquam autem voluptas similique, temporibus illo!</p>
+    </div>
+    <hr>
+    <div id="em">
+        <h2>em</h2>
+        <p>Repellat totam magni suscipit quae illum fuga, dolore nostrum itaque!</p>
+    </div>
+    <hr>
+    <div id="rem">
+        <h2>rem</h2>
+        <p>Id dolorum esse voluptatem eaque, voluptas ut eligendi incidunt dicta.</p>
+    </div>
+    <hr>
+    <div id="vw">
+        <h2>vw / viewport width</h2>
+        <p>Veniam, dolorem culpa eum earum harum aperiam sint eaque nemo.</p>
+    </div>
+    <hr>
+    <div id="vh">
+        <h2>vh / viewport height</h2>
+        <p>Quia beatae aut quibusdam ex illo dolorum dignissimos odit veniam!</p>
+    </div>
+    <hr>
+    <div id="vmin">
+        <h2>vmin / entweder viewport width oder height jenachdem was kleiner ist</h2>
+        <p>Aut vero voluptas, nulla in asperiores sed eligendi ipsam sapiente!</p>
+    </div>
+    <hr>
+    <div id="vmax">
+        <h2>vmax / entweder viewport width oder height jenachdem was größer ist</h2>
+        <p>Possimus ullam hic reiciendis corrupti incidunt tenetur? Excepturi, quas perspiciatis.</p>
+    </div>
+    <hr>
+</body>
+
+</html>
