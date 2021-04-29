@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS FORMS Ü</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>JS FORMS Ü</h1>
+    <form action="#">
+        <label for="">Title
+
+            <input type="text">
+        </label>
+        <label for="">Vorname
+
+            <input type="text">
+        </label>
+        <label for="">Nachname
+
+            <input type="text">
+        </label>
+        <input type="hidden" id="hiddenInp1" name="" value="">
+        <input type="hidden" id="hiddenInp2" name="" value="">
+        <input type="hidden" id="hiddenInp3" name="" value="">
+    </form>
+    <script>
+        /* https://myonlinemarketing.ch/?utm_source=ppdev&utm_medium=cpc&utm_campaign=Test-JavaScript-Kurs */
+        console.log('this.opener :>> ', this.opener);
+        /* Lesen Sie die Key-Value-Paare hinter dem Fragezeichen in der URL aus
+        Befüllen Sie name-Attribute von Hidden-Inputs mit dem Key von diesen Paaren 
+        und value von den Hidden-Input mit dem Value aus dem geholte Key-Value-Paar aus der URL */
+
+        /* Gebraucht werden:
+            Funktionen für Strings für Suchen und Aufschneiden (~~ find(), split()) */
+            /* Zuweisung: */
+/*             let inp1 = document.getElementById('hiddenInp1');
+            inp1.name = ???
+            inp1.value = ??? */
+            var str = "https://myonlinemarketing.ch/?utm_source=ppdev&utm_medium=cpc&utm_campaign=Test-JavaScript-Kurs"
+
+            var kleinereStringsVomGrößerenString = str.split("?"); // Liefert linken und rechten Teil vom String aufgeteilt an der Stelle, wo ? steht
+            console.log('res :>> ', kleinereStringsVomGrößerenString);
+            console.log('kleinereStringsVomGrößerenString[1] :>> ', kleinereStringsVomGrößerenString[1]);
+
+            /* Splitten Sie die benötigten Strings weiter, bis Sie die gefragten Key-Value Paare aus der URL bekommen */
+
+
+    </script>
+</body>
+
+</html>
