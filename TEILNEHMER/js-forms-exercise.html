@@ -13,7 +13,7 @@
 
 <body>
     <h1>JS FORMS Ü</h1>
-    <form action="#">
+    <form action="">
         <label for="">Title
 
             <input type="text">
@@ -29,6 +29,7 @@
         <input type="hidden" id="hiddenInp1" name="" value="">
         <input type="hidden" id="hiddenInp2" name="" value="">
         <input type="hidden" id="hiddenInp3" name="" value="">
+        <button>submit</button>
     </form>
     <script>
         /* https://myonlinemarketing.ch/?utm_source=ppdev&utm_medium=cpc&utm_campaign=Test-JavaScript-Kurs */
@@ -39,17 +40,36 @@
 
         /* Gebraucht werden:
             Funktionen für Strings für Suchen und Aufschneiden (~~ find(), split()) */
-            /* Zuweisung: */
-/*             let inp1 = document.getElementById('hiddenInp1');
-            inp1.name = ???
-            inp1.value = ??? */
-            var str = "https://myonlinemarketing.ch/?utm_source=ppdev&utm_medium=cpc&utm_campaign=Test-JavaScript-Kurs"
+        /* Zuweisung: */
+        /*             let inp1 = document.getElementById('hiddenInp1');
+                    inp1.name = ???
+                    inp1.value = ??? */
+        var str = "https://myonlinemarketing.ch/?utm_source=ppdev&utm_medium=cpc&utm_campaign=Test-JavaScript-Kurs"
 
-            var kleinereStringsVomGrößerenString = str.split("?"); // Liefert linken und rechten Teil vom String aufgeteilt an der Stelle, wo ? steht
-            console.log('res :>> ', kleinereStringsVomGrößerenString);
-            console.log('kleinereStringsVomGrößerenString[1] :>> ', kleinereStringsVomGrößerenString[1]);
+        var kleinereStringsVomGrößerenString = str.split("?"); // Liefert linken und rechten Teil vom String aufgeteilt an der Stelle, wo ? steht
+        console.log('res :>> ', kleinereStringsVomGrößerenString);
+        console.log('kleinereStringsVomGrößerenString[1] :>> ', kleinereStringsVomGrößerenString[1]); // utm_source=ppdev&utm_medium=cpc&utm_campaign=Test-JavaScript-Kurs
 
-            /* Splitten Sie die benötigten Strings weiter, bis Sie die gefragten Key-Value Paare aus der URL bekommen */
+        /* Splitten Sie die benötigten Strings weiter, bis Sie die gefragten Key-Value Paare aus der URL bekommen */
+        var stringsVonKeyValuePaaren = kleinereStringsVomGrößerenString[1].split('&');
+        console.log('stringsVonKeyValuePaaren :>> ', stringsVonKeyValuePaaren);
+        var einträgeAusKeyValuepaar1 = stringsVonKeyValuePaaren[0].split('=');
+        var einträgeAusKeyValuepaar2 = stringsVonKeyValuePaaren[1].split('=');
+        var einträgeAusKeyValuepaar3 = stringsVonKeyValuePaaren[2].split('=');
+        console.log('einträgeAusKeyValuepaar1 :>> ', einträgeAusKeyValuepaar1);
+        console.log('einträgeAusKeyValuepaar2 :>> ', einträgeAusKeyValuepaar2);
+        console.log('einträgeAusKeyValuepaar3 :>> ', einträgeAusKeyValuepaar3);
+
+        hiddenInp1.name = einträgeAusKeyValuepaar1[0];
+        hiddenInp1.value = einträgeAusKeyValuepaar1[1];
+        hiddenInp2.name = einträgeAusKeyValuepaar2[0];
+        hiddenInp2.value = einträgeAusKeyValuepaar2[1];
+        hiddenInp3.name = einträgeAusKeyValuepaar3[0];
+        hiddenInp3.value = einträgeAusKeyValuepaar3[1];
+
+        console.log('hiddenInp1 :>> ', hiddenInp1);
+
+
 
 
     </script>
