@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS CONDITIONS</title>
+</head>
+<body>
+    <h1>JS CONDITIONS</h1>
+    <table>
+        <tbody>
+            <tr>
+                <td style="padding: 1em">test</td>
+                <td style="padding: 1em">test</td>
+            </tr>
+            <tr>
+                <td style="padding: 1em">test</td>
+                <td style="padding: 1em">test</td>
+            </tr>
+            <tr>
+                <td style="padding: 1em">test</td>
+                <td style="padding: 1em">test</td>
+            </tr>
+            <tr>
+                <td style="padding: 1em">test</td>
+                <td style="padding: 1em">test</td>
+            </tr>
+            <tr>
+                <td style="padding: 1em">test</td>
+                <td style="padding: 1em">test</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        console.log('5 == "5" :>> ', 5 == '5');
+        console.log('5 === "5" :>> ', 5 === '5');
+        console.log('5 ? true : false :>> ', 5 ? true : false);
+        console.log('undefined ? true : false :>> ', undefined ? true : false);
+        console.log('null ? true : false :>> ', null ? true : false);
+        console.log('1 ? true : false :>> ', 1 ? true : false);
+        console.log('0 ? true : false :>> ', 0 ? true : false);
+        // Die interne Berechnung von Bedingungen sieht in JS ungefähr so aus:
+        // alles, was nicht undefined, nicht null und nicht 0 ist, ergibt true
+        function ifFunction (arg1) {
+            if (arg1 != undefined && arg1 != null && arg1 != 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        console.log("ifFunction(1) :>> ", ifFunction(1)); // true
+
+    </script>
+</body>
+</html>

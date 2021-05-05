@@ -1,16 +1,24 @@
+// JS Literale, die bestimmte Werte liefern
+5; // liefert Wert 5 in Maschinenformat - 00000101
+"A"; // liefert 01000001
+true;
+[1, 2, 3];
+{
+  prop1: 2;
+  prop2: 3;
+};
+
+
 // Anweisungen direkt in einer JS-Datei werden im globalen Gültigkeitsbereich ausgeführt
 var y = 4;
 // Vorsicht: var-Variablen ignorieren Gültigkeitsbereiche
 
 // neue Gültigkeitsbereiche werden mit geschw. Klammern angelegt
 {
-    let z = 6;
+  let z = 6;
 }
 // console.log(z); // Uncaught ReferenceError: z is not defined at js-intro.js:10
 // Das heißt, Funktionen und Objekte sind neue Gültigkeitsbereiche
-
-
-
 
 /* Es gibt bei allen Programmiersachen 2 Stellen: Definitionsstelle und Aufrufstelle */
 
@@ -18,34 +26,32 @@ var y = 4;
 var x = 2;
 
 // Variablen: Aufruf
-console.log('x :>> ', x);
-
+console.log("x :>> ", x);
 
 // Funktionen brauchen wir, um den Zeitpunkt ihrer Ausführung selber zu definieren, und wenn wir man die gleichen Codezeilen mehrmals ausführen möchte.
 // Funktionen: Definition
 
 function myFunction() {
-    console.log('myFunction wurde aufgerufen');
+  console.log("myFunction wurde aufgerufen");
 }
 // Funktionen: Aufruf
 // myFunction();
 
-
 // Objekte: Definition
 var myObject = {
-    prop1: 4,
-    prop2: 5,
-    objektMethode: function () {
-        this.prop1 = 44;
-    }
-}
+  prop1: 4,
+  prop2: 5,
+  objektMethode: function () {
+    this.prop1 = 44;
+  },
+};
 
 // Objekte: Aufruf:
 // das ganze Objekte:
-console.log('myObject :>> ', myObject);
+console.log("myObject :>> ", myObject);
 // nur ein Member
-console.log('myObject.prop1 :>> ', myObject.prop1);
+console.log("myObject.prop1 :>> ", myObject.prop1);
 // eine Methode aufrufen
 myObject.objektMethode();
 // prüfen, ob Methode ausgeführt wurde:
-console.log('myObject.prop1 :>> ', myObject.prop1);
+console.log("myObject.prop1 :>> ", myObject.prop1);
