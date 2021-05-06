@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ARROW FCT</title>
+</head>
+
+<body>
+    <h1>JS ARROW FCT</h1>
+    <p id="output"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    <script>
+        // Funktion mit einem Namen
+        // Name braucht man, um die Funktion aufzurufen
+        function fctName() {
+        }
+
+        // Funktion ohne Namen, Anonyme Funktion
+        // werden gebaut, wenn das Aufrufen von einer anderen Funktion passiert
+        // setInterval(was muss ausgeführt werden, nach wie vielen Sekunden);
+        // VARIANTE 1
+        function giveDateTime() {
+            output.textContent = new Date().toLocaleTimeString();
+        }
+        setInterval(giveDateTime, 1000); // Achtung, Funktionname ohne runde Klammern: weil nur Funktionskörper gebraucht wird
+        
+        
+        // VARIANTE 2
+        setInterval(function () {
+            output2.textContent = new Date().toLocaleTimeString();
+        }, 1000);
+
+
+        // VARIANTE 3
+        // anonyme Funktionen kann man als Pfeilfunktionen schreiben
+        setInterval(() => {
+            output3.textContent = new Date().toLocaleTimeString();
+        }, 1000);
+
+
+    </script>
+</body>
+
+</html>

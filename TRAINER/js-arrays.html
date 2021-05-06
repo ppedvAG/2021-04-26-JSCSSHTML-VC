@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ARRAYS</title>
+</head>
+<body>
+    <h1>
+        JS ARRAYS
+    </h1>
+    <p id="output"></p>
+    <script>
+        // Literal für ein Array
+        [1, 2, 3];
+
+        // Array Wert abfangen mit einer Variable
+        let myArray = [1, 2, 3];
+
+        // Zugriff auf ein konkretes Array-Element
+        myArray[0]; 
+        myArray[1]; 
+        myArray[2];
+        myArray[3];
+
+        // Wegen nicht abgefangenen Fehlern bleibt das Programm stehen
+        // console.log('myArray0 :>> ', myArray0); // Uncaught ReferenceError: myArray0 is not defined
+        // console.log('bin nach dem Fehler'); // beim Fehler wird das nicht ausgeführt
+
+        console.log('myArray[0] :>> ', myArray[0]); // 1
+        console.log('myArray[3] :>> ', myArray[3]); // undefined, Achtung: es ist in JS kein Fehler
+
+        // Grenze von einem Array
+        console.log('myArray.length :>> ', myArray.length); // 3 und einmal höher als das größte Index
+
+        // Elemente vom Array ändern:
+        myArray[2] = 5
+        console.log('myArray[2] :>> ', myArray[2]); // 5
+
+        // JS Arrays sind dynamisch, ich kann auf beliebigen Index zugreifen
+        myArray[3] = 55;
+        myArray[4] = 77;
+        myArray[7] = 234;
+        console.log('myArray[5] :>> ', myArray[5]); // undefined
+        console.log('myArray[7] :>> ', myArray[7]); // 234
+        console.log('myArray :>> ', myArray); //  (8) [1, 2, 5, 55, 77, empty × 2, 234]
+
+        // Array in der Oberfläche
+        output.textContent = myArray; // 1,2,5,55,77,,,234
+
+        // prüfen, ob ein Array
+        console.log('typeof myArray :>> ', typeof myArray); // object
+
+        let myObjekt = {
+            prop1: 3, 
+            prop2: 4
+        }
+        
+        console.log('myObjekt.length :>> ', myObjekt.length); // undefined
+        // Durch diesen Unterschied kann man Array von einem Objekt unterscheiden
+
+
+    </script>
+</body>
+</html>

@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS PW CONFIRM</title>
 </head>
+
 <body>
     <h1>JS PW CONFIRM</h1>
-    <input type="password" name="" id="">
-    <input type="password" name="" id="">
-    <button>confirm</button>
+
+    <!-- <input type="text" name="" id="inp2" onchange="checkInput()"> 
+    Event change passt nicht, weil er wird erst beim Verlassen des Feldes aufgerufen -->
+    <input type="text" name="" id="inp2" oninput="checkInput()">
+    <input type="text" name="" id="inp1" oninput="checkInput()">
+    <button id="btn" disabled onclick="sayOk()">confirm</button>
+    <button disabled="disabled">confirm</button>
     <script>
         /* Button wird erst dann aktiv (klickbar) wenn die Inputs befüllt sind und die Eingaben übereinstimmen
         Gebraucht werden:
         Attribut disabled beim Button */
+        function checkInput() {
+            console.log('checkInput called');
+            if (inp1.value && inp2.value && inp1.value === inp2.value) {
+                // btn.disabled = 'disabled';
+                btn.disabled = false;
+            }
+        }
+        function sayOk() {
+            btn.textContent = 'pw change confirmed'
+        }
 
     </script>
 </body>
+
 </html>

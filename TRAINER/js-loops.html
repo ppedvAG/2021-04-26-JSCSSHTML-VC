@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ARRAYS</title>
+</head>
+
+<body>
+    <h1>JS ARRAYS</h1>
+    <script>
+        let myArray = ['a', 'b', 'c'];
+        /* 
+        Solange eine Bedingung stimmt, werden die Anweisungen in einer Schleife ausgeführt 
+        */
+        // SYNTAX
+        //    for (iteratorVariable; bedingung; VariablenÄnderung) {
+        //        Anweisungen           
+        //    }
+
+        for (
+            let index = 0; // variable (Iterator) anlegen
+            index < myArray.length; // solange diese Bedingung stimmt, werden Anweisungen ausgeführt
+            // die Bedingung wird nach jedem Durchlauf geprüft
+            index++ // Änderung der Variable nach jedem Durchlauf
+            // index = index + 1 // andere Schreibweise für index++
+        ) {
+            // AUSLESEN DER ELEMENTWERTE
+            // ohne Zwischenvariable
+            console.log('myArray[index] :>> ', myArray[index]);
+
+            // mit Zwischenvariable
+            let element = myArray[index];
+            console.log('element :>> ', element);
+
+            // ÄNDERN ODER BEFÜLLEN VON ELEMENTEN
+            myArray[index] = myArray[index] + 'Zusatz';
+            console.log('myArray[index] :>> ', myArray[index]);
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
