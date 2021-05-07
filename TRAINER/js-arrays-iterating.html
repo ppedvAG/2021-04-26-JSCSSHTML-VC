@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ARRAYS ITERATING</title>
+</head>
+<body>
+    <h1>JS ARRAYS ITERATING</h1>
+    <script>
+        let myElements = ['kupfer', 'eisen', 'alluminium', 'bronze']
+        // VARIANTE 1: FOR SCHLEIFE
+        // for (let index = 0; index < array.length; index++) {
+        //     const element = array[index];
+            
+        // }
+
+        // VARIANTE 2: FOR ITERATOR
+        // for (const iterator of object) {// object in diesem Fall ist eine Datenstruktur, wo Einträge indexiert (nummeriert) sind
+        // for (const element of myElements) {// object in diesem Fall ist eine Datenstruktur, wo Einträge indexiert (nummeriert) sind
+        for (let element of myElements) {// object in diesem Fall ist eine Datenstruktur, wo Einträge indexiert (nummeriert) sind
+            console.log('element :>> ', element);
+            element = 'test'
+            console.log('element :>> ', element); // Uncaught TypeError: Assignment to constant variable.
+        }
+        console.log('myElements :>> ', myElements); // Array unverändert ["kupfer", "eisen", "alluminium", "bronze"]
+
+        // VARIANTE 3: VORDEFINIERTE METHODEN FÜR ARRAYS
+        // Szenario hier: Länge von den Wörtern im Array auslesen und in ein anderes Array ablegen
+        let elementsLengths = myElements.map((variableFürElement) => {
+            let length = variableFürElement.length
+            return length
+        })
+        console.log('elementsLengths :>> ', elementsLengths);
+
+
+
+    </script>
+    
+</body>
+</html>

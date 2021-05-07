@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ARRAY MAP</title>
+</head>
+
+<body>
+    <h1>JS ARRAY MAP</h1>
+    <pre>
+        Laufen Sie das (Todos-)Array durch und geben Sie Properties von den Objekten in diesem Array in Form einer Tabelel aus.
+        Nehmen Sie als Vorlage die Ausgabe in die sortierte Liste.
+        Als Alternative zu der Vorgehensweise bei der Liste KÖNNEN Sie verdefinierten JS-Funktionen zum Befüllen einer Tabelle nutzen:
+        - insertRow()
+        - insertCell()
+    </pre>
+
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+    <ol id='platzFürMehrHTML'></ol>
+
+    <script>
+        let myAlbums = [
+            {
+                "userId": 1,
+                "id": 1,
+                "title": "quidem molestiae enim"
+            },
+            {
+                "userId": 1,
+                "id": 2,
+                "title": "sunt qui excepturi placeat culpa"
+            },
+            {
+                "userId": 1,
+                "id": 3,
+                "title": "omnis laborum odio"
+            },
+            {
+                "userId": 1,
+                "id": 4,
+                "title": "non esse culpa molestiae omnis sed optio"
+            },
+            {
+                "userId": 1,
+                "id": 5,
+                "title": "eaque aut omnis a"
+            },
+            {
+                "userId": 1,
+                "id": 6,
+                "title": "natus impedit quibusdam illo est"
+            }
+        ]
+        for (let index = 0; index < myAlbums.length; index++) {
+            console.log('myAlbums[index].title :>> ', myAlbums[index].title);
+            // Wie erstelle ich neues HTML in JS. Variante 1: Durch innerHTML und HTML in Strings
+
+            // Wenn links und rechts in einer Zuweisung die gleiche Variable auftaucht, dann kann man das kürzen:
+            // platzFürMehrHTML.innerHTML = platzFürMehrHTML.innerHTML + '<li>' + myAlbums[index].title + '</li>';
+            platzFürMehrHTML.innerHTML += '<li>' + myAlbums[index].title + '</li>';
+        }
+
+
+        /* ADVANCED */
+        /* Wenn es mit Alben erledigt ist, könnten Sie noch das Todos-Array auch in einer Tabelle ausgeben. Aber hier muss eine Funktion dafür gebaut werden.  */
+        fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(response => response.json())
+            .then(json => console.log(json))
+
+
+    </script>
+</body>
+
+</html>
