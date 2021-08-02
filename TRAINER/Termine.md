@@ -21,5 +21,5 @@ macht 10 x 3h15min = 10 x 195min = 1950min
 | 04.04 | 0h0min - 0min | 1025min |
 | 05.04 | 1h50min - 110min | 915min |
 | 06.04 | 1h50min - 110min | 805min |
-| 07.04 | | |
+| 07.04 | 1h50min - 110min | 655min |
 | xx.xx | | |
